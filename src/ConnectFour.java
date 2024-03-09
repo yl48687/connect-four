@@ -1,5 +1,3 @@
-package cs1302.game;
-
 import cs1302.gameutil.GamePhase;
 import cs1302.gameutil.Token;
 import cs1302.gameutil.TokenGrid;

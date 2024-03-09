@@ -1,10 +1,6 @@
-package cs1302.game;
-
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
-
-import cs1302.game.ConnectFour;
 import cs1302.gameutil.GamePhase;
 import cs1302.gameutil.Token;
 

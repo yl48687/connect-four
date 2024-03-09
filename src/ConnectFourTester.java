@@ -1,13 +1,9 @@
-package cs1302.game;
-
 import java.util.Scanner;
 import cs1302.gameutil.Token;
 import cs1302.gameutil.GamePhase;
 
 /**
- * A command-line program for testing {@link cs1302.game.ConnectFour}. Students should refer to
- * the <a href="https://github.com/cs1302uga/cs1302-c4-alpha">project description</a> for more
- * details about what should be included in this class.
+ * A command-line program for testing {@link cs1302.game.ConnectFour}.
  */
 public class ConnectFourTester {
 
@@ -16,11 +12,6 @@ public class ConnectFourTester {
     private static int GETCOLS_POINTS = 2;
     private static int OTHER_POINTS = 2;
 
-    // These variables are used in some of the test methods to store what
-    // the values of each variable should be when returned from a valid
-    // game object. In other words, they hold the "right answer". What you
-    // see here are default values. They are modified, as needed, throughout
-    // this tester.
     private static int numDropped =    0;
     private static int lastDropCol =  -1;
     private static int lastDropRow =  -1;
@@ -45,8 +36,6 @@ public class ConnectFourTester {
      * @param args the command-line arguments (not used)
      */
     public static void main(String[] args) {
-        // To see information about the test methods that are run below, refer
-        // to the documentation comments.
         testConstructor();
         testGetRows();
         testGetCols();
@@ -56,16 +45,6 @@ public class ConnectFourTester {
         testNoStatic();
         System.out.println("Total Points Earned: " + totalPoints);
     } // main
-
-    //----------------------------------------------------------------------------------------------
-    // TEST METHODS - Each provided test is separated with a heading like this one.
-    // Each test requires multiple, separate methods. Pay close attention to these dependencies.
-    // You should add more methods to test your code under different scenarios.
-    //----------------------------------------------------------------------------------------------
-
-    //----------------------------------------------------------------------------------------------
-    // TEST CONSTRUCTOR
-    //----------------------------------------------------------------------------------------------
 
     /**
      * Test the constructor. This runs several test cases.
@@ -121,14 +100,6 @@ public class ConnectFourTester {
         } // try
     } // testConstructor3
 
-    // Recommendation to students: Add a textConstructor4 and testConstructor5 method that makes
-    // sure the constructor throws an IllegalArgumentException when cols is too small and too
-    // big, respectively.
-
-    //----------------------------------------------------------------------------------------------
-    // TEST getRows
-    //----------------------------------------------------------------------------------------------
-
     /**
      * Test the {@code getRows} method.
      */
@@ -161,10 +132,6 @@ public class ConnectFourTester {
         } // if
     } // testGetRows
 
-    //----------------------------------------------------------------------------------------------
-    // TEST getCols
-    //----------------------------------------------------------------------------------------------
-
     /**
      * Test the {@code getCols} method.
      */
@@ -194,10 +161,6 @@ public class ConnectFourTester {
             } // if
         } // if
     } // testGetCols
-
-    //----------------------------------------------------------------------------------------------
-    // TEST isInBounds
-    //----------------------------------------------------------------------------------------------
 
     /**
      * Test the {@code getIsInBounds} method.
@@ -269,10 +232,6 @@ public class ConnectFourTester {
         } // if
     } // testIsInBounds2
 
-    //----------------------------------------------------------------------------------------------
-    // TEST GAMEPLAY
-    //----------------------------------------------------------------------------------------------
-
     /**
      * Test the overall game play on a 7x9 board. Students should write similar
      * methods to test other board sizes. This method runs through a
@@ -292,20 +251,12 @@ public class ConnectFourTester {
             return;
         } // if
 
-        // Recommendation to students: Add a call to drop token before player tokens
-        // are set. Think about the expected behavior and properly test this scenario.
-
         boolean readyGameTest = testReadyGame(game);
         if (!readyGameTest) {
             // ready game test failed
             return;
         } // if
 
-        // Recommendation to students: Test invalid drops here. Try passing an illegal
-        // player number and try dropping a token in a column that is out of bounds.
-
-        // These three variables hold the answers. They will be used to compare the
-        // values returned from the game object in the testDrop method.
         lastDropCol = 0;
         numDropped = 1;
         isWon = false;
@@ -336,7 +287,6 @@ public class ConnectFourTester {
             // Goes up by one after each row is full
             lastDropRow--;
         } // for
-
     } // testSetPlayerTokens
 
     /**
@@ -579,9 +529,6 @@ public class ConnectFourTester {
         return true;
     } // checkVariables
 
-    //----------------------------------------------------------------------------------------------
-    // TEST NO STATIC
-    //----------------------------------------------------------------------------------------------
     /**
      * Verifies that the instance variables of the class are not static. Does this by creating
      * two games, modifying one, and making sure the change didn't impact the second game.
@@ -609,9 +556,6 @@ public class ConnectFourTester {
 
     } // testNoStatic
 
-    //----------------------------------------------------------------------------------------------
-    // TEST FULL BOARD
-    //----------------------------------------------------------------------------------------------
     /**
      * Creates a new game and fills it with tokens such that no winner is present. This
      * tests that the game properly ends when the board fills with no winner.
@@ -652,7 +596,6 @@ public class ConnectFourTester {
 
         // At this point, the board should be full with no winner present.
         testGameOver(game);
-
     } // testFullBoard
 
     /**

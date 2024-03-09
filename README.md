@@ -1,19 +1,37 @@
 # Connect Four
-This project involves implementing and testing a class representing the popular board game Connect Four. Connect Four is a two-player connection game played on a two-dimensional grid of tokens. The core functionality of the game revolves around strategically dropping tokens into columns to form a line of four tokens either horizontally, vertically, or diagonally. Below is an overview of the project's design and functionality:
+This project involves implementing and testing a class representing the popular board game Connect Four. Connect Four is a two-player connection game played on a two-dimensional grid of tokens. The basic rules are as follows:
+- Players take turns dropping tokens into non-full columns on the grid.
+- Tokens fall to the lowest available position in the column.
+- The game ends when one player successfully connects four tokens horizontally, vertically, or diagonally, or when the grid is completely filled.
+The implemented class will provide the functionality to manage the game's state and allow for gameplay interaction. The specific requirements and phases of the game are detailed below.
 
 ## Design Overview
-The project is structured to provide a class-based representation of the Connect Four game. It aims to offer a flexible and modular design, enabling easy interaction with the game's components. The codebase is organized into multiple files, each responsible for distinct aspects of the game's implementation. This design approach ensures better code organization, scalability, and maintainability.
+The project follows a hierarchical structure with the ConnectFour class representing the core game logic. This class is expected to support various game phases and interactions. Additionally, the ConnectFourTester class is provided for testing the functionality of the `ConnectFour` class under different scenarios. The `ConnectFourCLI` class offers a command-line interface for playing the game.
 
 ## Functionality
-The Connect Four class facilitates setting up a new game by initializing the game grid with the specified number of rows and columns. It assigns unique tokens to each player and prepares the game for play.
+`ConnectFour`:
+- Initializes a game grid with specified dimensions.
+- Manages player tokens and their turns.
+- Tracks the state of the game, including phase transitions.
+- Implements methods to drop tokens, check for wins, and manage game phases.
 
-Players take turns dropping their tokens into columns on the grid. The tokens fall to the lowest available position in the selected column. The game continues until a player forms a line of four tokens, indicating a win, or the grid is filled, resulting in a draw.
+`ConnectFourTester`:
+- Provides test cases to verify the behavior of the ConnectFour class.
+- Tests various scenarios, including exceptional cases and phase transitions.
+- Ensures the correctness and robustness of the implemented functionality.
 
-The Connect Four game progresses through different phases, including NEW, READY, PLAYABLE, and OVER. Each phase corresponds to specific actions and behaviors within the game, such as initializing the game, setting up players, playing moves, and determining game outcomes.
+`ConnectFourCLI`:
+- Enables players to interactively play the game via the command-line interface.
+- Facilitates user input for dropping tokens and displays the current state of the game.
+- Serves as a tool for manual testing and debugging of the ConnectFour class.
+
 
 ## File Structure and Content
-- **ConnectFour.java**: Contains the implementation of the ConnectFour class, responsible for managing the game state, handling player moves, and determining game outcomes.
-
-- **ConnectFourTester.java**: Provides a testing framework for the ConnectFour class, allowing developers to verify the correctness and functionality of various methods and behaviors.
-
-- **ConnectFourCLI.java**: Implements a command-line interface for playing Connect Four, enabling users to interactively engage with the game and test its functionality.
+connect-four/
+    ├── src/
+    │   ├── ConnectFour.java
+    │   ├── ConnectFourCLI.java
+    │   └── ConnectFourTester.java
+    ├── lib/
+    │   └── gameutil.jar
+    └── README.md
