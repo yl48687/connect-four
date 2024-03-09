@@ -30,12 +30,36 @@ The project follows a hierarchical structure with the `ConnectFour` class repres
 ## File Structure and Content
 ```
 connect-four/
-    ├── src/
-    │   ├── ConnectFour.java
-    │   ├── ConnectFourCLI.java
-    │   └── ConnectFourTester.java
-    ├── lib/
-    │   └── gameutil.jar
-    ├── compile.sh
-    └── README.md
+├── compile.sh
+├── img
+│   ├── GamePhase.NEW.png
+│   ├── GamePhase.NEW.svg
+│   ├── GamePhase.OVER.POST.png
+│   ├── GamePhase.OVER.POST.svg
+│   ├── GamePhase.OVER.PRE-1.png
+│   ├── GamePhase.OVER.PRE.png
+│   ├── GamePhase.OVER.PRE.svg
+│   ├── GamePhase.PLAYABLE.1.png
+│   ├── GamePhase.PLAYABLE.1.svg
+│   ├── GamePhase.PLAYABLE.2.png
+│   ├── GamePhase.PLAYABLE.2.svg
+│   ├── GamePhase.PLAYABLE.3.png
+│   ├── GamePhase.PLAYABLE.3.svg
+│   ├── GamePhase.PLAYABLE.4.png
+│   ├── GamePhase.PLAYABLE.4.svg
+│   ├── GamePhase.READY.png
+│   ├── GamePhase.READY.svg
+│   ├── phases.png
+│   └── phases.svg
+├── lib
+│   └── gameutil.jar
+├── README.md
+├── resources
+│   ├── connectfour.txt
+│   ├── gameover.txt
+│   └── welcome.txt
+└── src
+    ├── ConnectFourCLI.java
+    ├── ConnectFour.java
+    └── ConnectFourTester.java
 ```
